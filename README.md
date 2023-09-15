@@ -1,4 +1,5 @@
-# shopping-list(http://akmal-ramadhan21-tutorial.pbp.cs.ui.ac.id)
+# shopping-list
+[Laman shopping-list](http://akmal-ramadhan21-tutorial.pbp.cs.ui.ac.id)
 
 Nama    : Akmal Ramadhan
 
