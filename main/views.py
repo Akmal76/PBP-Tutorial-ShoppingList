@@ -26,9 +26,7 @@ def show_main(request):
     return render(request, "main.html", context)
 
 def create_product(request):
-    print('before')
     form = ProductForm(request.POST or None)
-    print("halo")
 
     if form.is_valid() and request.method == "POST":
         product = form.save(commit=False)
@@ -86,13 +84,4 @@ def logout_user(request):
     logout(request)
     response = HttpResponseRedirect(reverse('main:login'))
     response.delete_cookie('last_login')
-    return redirect('main:login')
-
-def create_product(request):
-    form = ProductForm(request.POST or None)
-
-    if form.is_valid() and request.method == "POST":
-        product = form.save(commit=False)
-        product.user = request.user
-        product.save()
-        return HttpResponseRedirect(reverse('main:show_main'))
+    return response
